@@ -82,7 +82,7 @@ export async function addJob(input: CreateJobInput): Promise<string> {
       notes: input.notes || '',
       salary: input.salary || '',
       location: input.location || '',
-      appliedDate: Timestamp.now(),
+      appliedDate: input.appliedDate ? Timestamp.fromDate(input.appliedDate) : Timestamp.now(),
       createdAt: Timestamp.now(),
       updatedAt: Timestamp.now(),
     });

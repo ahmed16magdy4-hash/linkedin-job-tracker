@@ -31,6 +31,7 @@ export interface CreateJobInput {
   jobTitle: string;
   jobUrl?: string;
   status?: JobStatus;
+  appliedDate?: Date;
   notes?: string;
   salary?: string;
   location?: string;
